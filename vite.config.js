@@ -1,16 +1,13 @@
 // vite.config.js
-const { resolve } = require('path')
-const { defineConfig } = require('vite')
+const { resolve } = require('path');
 
-module.exports = defineConfig({
+module.exports = {
   build: {
     rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-        about: resolve(__dirname, 'about', 'index.html'),
-        privacy: resolve(__dirname, 'privacy', 'index.html'),
-        start: resolve(__dirname, 'start', 'index.html'),
+        input: {
+            main: resolve(__dirname, 'index.html'),
+            about: resolve(__dirname, 'src/about/index.html')
       }
     }
   }
-})
+}
